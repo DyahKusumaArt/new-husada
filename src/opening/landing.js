@@ -218,7 +218,7 @@ function Landing() {
                                 <Col className="kanan">
                                    <p>Jasa Pengobatan</p>
                                    <p>
-                                    Desripsi
+                                    Lorem
                                    </p>
                                 </Col>
                                 <Col><img
