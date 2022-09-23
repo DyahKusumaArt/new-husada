@@ -3,7 +3,7 @@ import { Form, Button, Row } from "react-bootstrap";
 import React from "react";
 import login from '../assets/image/login.jpg';
 import "../App.css"
-const Register = () => {
+const Login = () => {
     const onFinish = values => {
         console.log('Success:', values);
     };
@@ -20,21 +20,17 @@ const Register = () => {
                 </div>
                 <Form className="login-form"
                 >
-                    <p className="form-title">Create Account</p>
-                    <p>Register Here</p>
-                    <Form.Group className="mb-" controlId="formBasicEmail">
+                    <p className="form-title">Welcome back</p>
+                    <p>Login to Bali Husada</p>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Please input your email" required />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
                     </Form.Group>
-                    <Form.Group className="mb-" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder=" Please input your Password" required />
-                    </Form.Group>
-                    <Form.Group className="mb-1" controlId="formBasicPassword1">
-                        <Form.Label>Confirm Password</Form.Label>
                         <Form.Control type="password" placeholder=" Please input your Password" required />
                     </Form.Group>
 
@@ -43,16 +39,16 @@ const Register = () => {
                     </antd.Form.Item> */}
 
                     <Row className="mx-auto">
-                        <Button variant="success"  href="/login" type="submit" >
+                        <Button variant="success" href="/dashboard" type="submit">
                             Save
                         </Button>
                     </Row>
 
-                    <div className="mt-1">Punya akun? <a href="/login">Login</a></div>
+                    <div className="mt-4">Tidak Punya Akun? <a href="/register">Register</a></div>
                 </Form>
             </div>
         </div>
     );
 };
 
-export default Register;
+export default Login;

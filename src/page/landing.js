@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Nav, Navbar, Container, Carousel, Card, Row, Col, Table } from "react-bootstrap";
+import { Nav, Navbar, Container, Carousel, Card, Row, Col, Button } from "react-bootstrap";
 import satu from '../assets/image/1.jpg';
 import dua from '../assets/image/2.jpg';
 import tiga from '../assets/image/3.jpg';
@@ -43,45 +43,61 @@ function Landing() {
     }];
     const Layanan = [{
         nama: "Jasa Pengobatan",
-        label: "Penghusada, Balian Dan Lain Sebagainya"
+        label: "Penghusada, Balian, Dukun, Tabib"
     }, {
-        nama: "Konsultas",
-        label: "Overview"
+        nama: "Konsultasi",
+        label: "Penghusada, Balian, Dukun, Tabib"
     }, {
-        nama: "Pengobatan",
-        label: "Overview"
+        nama: "Pengobatan Alternatif",
+        label: "Chiropractic, Akupuntur, dan lainnya"
     }, {
-        nama: "obat 4",
-        label: "Overview"
+        nama: "Jasa Populer",
+        label: "Pawang Hujan, Pelindung diri, dan lainnya"
     }, {
-        nama: "obat 5",
-        label: "Overview"
+        nama: "Marketplace",
+        label: "Jual Beli dan penawaran lainnya"
     }];
     return (
         <div>
-            <div className="header p-3" >
-                <Navbar collapseOnSelect expand="lg" >
-                    <Container className="">
+            <div className="header p-2" >
+                <Navbar collapseOnSelect expand="lg" className="atasH">
+                    <Container className="" >
                         <div>
-                            <Navbar.Brand href="#home">HUSADA Center</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Brand href="#home" className="brand text-white" >Husada Center</Navbar.Brand>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
                         </div>
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="me-auto">
-                                <Nav.Link href="#features">Informasi</Nav.Link>
-                                <Nav.Link href="#features">Layanan</Nav.Link>
-                                <Nav.Link href="#features">Peta</Nav.Link>
+                        <Navbar.Collapse id="responsive-navbar-nav" >
+                            <Nav className="me-auto text-white">
+                                <Nav.Link href="#features" className="text-white">Informasi</Nav.Link>
+                                <Nav.Link href="#features" className="text-white">Layanan</Nav.Link>
+                                <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/login">Login</Nav.Link>
-                                <Nav.Link href="/register">Register</Nav.Link>
+                                <Nav.Link href="/register" className="text-white">Register</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
+                        <Nav.Link href="/login" className="p-2">Login</Nav.Link>
                     </Container>
                 </Navbar>
 
             </div>
             <div>
+                <div className=" d-flex flex-row">
+                    <Container className=" d-flex flex-row" >
+                        {Layanan.map((item, key) =>
+                                <Card className=" " key={key} style={{ width: '16rem', marginRight: '15px', marginTop:'5px', height:'6rem' }}>
+                                    <Card.Body>
+                                        <Card.Title>{item.nama}</Card.Title>
+                                        {/* <Card.Text>
+                                            {item.label}
+                                        </Card.Text> */}
+                                        <Button variant="primary">Go somewhere</Button>
+                                    </Card.Body>
+                                </Card>
+                        )}
+                    </Container>
+                </div>
+
                 <Carousel activeIndex={index} onSelect={handleSelect} >
 
                     <Carousel.Item >
@@ -148,79 +164,6 @@ function Landing() {
                 </Row>
                 <div className="mt-5 text-center text-white pb-3"><a href="#" > Login For More Content</a></div>
 
-            </Container>
-            <Container className="red shadow bg-opacity-100">
-                <h3 className="text-center m-5 pt-3 ">
-                    Layanan Dukun
-                </h3>
-                <Row>
-                    <Col className="kanan ">
-                        <p>Jasa Pengobatan</p>
-                        <p>
-                            Desripsi
-                        </p>
-                    </Col>
-                    <Col><img
-                        className="d-block w-75 m-3 rounded-5"
-                        src={pengobatan}
-                        url
-                        alt="First slide"
-                    /></Col>
-                </Row>
-                <Row>
-                    <Col><img
-                        className="d-block w-75 mx-3 rounded-5"
-                        src={pengobatan}
-                        url
-                        alt="First slide"
-                    />
-                    </Col>
-                    <Col className="mt-5">
-                        <p>Konsultasi</p>
-                        <p>Deskripsi</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="kanan">
-                        <p>Jasa Pengobatan</p>
-                        <p>
-                            Desripsi
-                        </p>
-                    </Col>
-                    <Col><img
-                        className="d-block w-75 m-3 rounded-5"
-                        src={pengobatan}
-                        url
-                        alt="First slide"
-                    /></Col>
-                </Row>
-                <Row>
-                    <Col><img
-                        className="d-block w-75 mx-3 rounded-5"
-                        src={pengobatan}
-                        url
-                        alt="First slide"
-                    />
-                    </Col>
-                    <Col className="mt-5">
-                        <p>Konsultasi</p>
-                        <p>Deskripsi</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="kanan">
-                        <p>Jasa Pengobatan</p>
-                        <p>
-                            Desripsi
-                        </p>
-                    </Col>
-                    <Col><img
-                        className="d-block w-75 m-3 rounded-5"
-                        src={pengobatan}
-                        url
-                        alt="First slide"
-                    /></Col>
-                </Row>
             </Container>
         </div>
     );
