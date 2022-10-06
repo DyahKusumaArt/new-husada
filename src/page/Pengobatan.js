@@ -28,11 +28,12 @@ const Pengobatan = () => {
                     </Container>
                 </Navbar>
             </div>
-            <div className="mt-3" >
+            <div style={{background:"#212121", height:'100%'}} >
+                <br></br>
                 <p className="text-lg-center">List Pengobatan "setelah login memilih fitur untuk pengobatan"</p>
                 <hr/>
                 <Container className="mx-auto d-flex justify-content-between">
-                    <Card style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white' }}>
+                    <Card style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white', paddingBottom:'50px' }}>
                       
                         <Card.Body>
                             <Card.Title>Dukun</Card.Title>
@@ -43,7 +44,7 @@ const Pengobatan = () => {
                             <Button variant="primary" href="/dukun">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white' }}>
+                    <Card className="mx-5" style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white', paddingBottom:'50px' }}>
                       
                         <Card.Body>
                             <Card.Title>Balian</Card.Title>
@@ -57,7 +58,7 @@ const Pengobatan = () => {
                    
                 </Container>
                 <Container className="mx-auto d-flex justify-content-between mt-5">
-                    <Card style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white'  }}>
+                    <Card style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white', paddingBottom:'50px'  }}>
                       
                         <Card.Body>
                             <Card.Title>Penghusada</Card.Title>
@@ -68,7 +69,7 @@ const Pengobatan = () => {
                             <Button variant="primary" href="/penghusada">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white' }}>
+                    <Card className="mx-5" style={{ width: '25rem', height:'15rem', background:'#AF1B3F', color:'white', paddingBottom:'50px' }}>
                       
                         <Card.Body>
                             <Card.Title>Tabib</Card.Title>

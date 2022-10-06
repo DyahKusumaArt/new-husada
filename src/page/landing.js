@@ -91,7 +91,7 @@ function Landing() {
                                         {/* <Card.Text>
                                             {item.label}
                                         </Card.Text> */}
-                                        <Button variant="primary">Go somewhere</Button>
+                                        <Button variant="primary" href="/pengobatan">Go somewhere</Button>
                                     </Card.Body>
                                 </Card>
                         )}
