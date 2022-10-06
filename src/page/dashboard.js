@@ -4,8 +4,6 @@ import React from "react";
 import profile from '../assets/image/profile-png.png'
 import "../App.css"
 const Dashboard = () => {
-
-
     return (
         <div >
             <div className="header p-2 " >
@@ -33,8 +31,8 @@ const Dashboard = () => {
                 <p className="text-lg-center">Husada Center "setelah login memilih fitur untuk pengobatan, konsultasi dan lainnya"</p>
                 <hr/>
                 <Container className="mx-auto d-flex justify-content-between">
-                    <Card style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card style={{ width: '28rem' , height:'250px'}}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Jasa Pengobatan</Card.Title>
                             <Card.Text>
@@ -44,8 +42,8 @@ const Dashboard = () => {
                             <Button variant="primary" href="/pengobatan">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card className="mx-5" style={{ width: '28rem', height:'250px' }}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Konsultasi</Card.Title>
                             <Card.Text>
@@ -55,8 +53,8 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card style={{ width: '28rem', height:'250px' }}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Pengobatan Alternatif</Card.Title>
                             <Card.Text>
@@ -68,8 +66,8 @@ const Dashboard = () => {
                     </Card>
                 </Container>
                 <Container className="mx-auto d-flex justify-content-between mt-5">
-                    <Card style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card style={{ width: '28rem', height:'250px' }}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Jasa Populer</Card.Title>
                             <Card.Text>
@@ -79,8 +77,8 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card className="mx-5" style={{ width: '28rem', height:'250px' }}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Marketplace</Card.Title>
                             <Card.Text>
@@ -90,8 +88,8 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '28rem' }}>
-                        <Card.Img variant="top" src={profile} />
+                    <Card style={{ width: '28rem', height:'250px'  }}>
+                        {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Soon</Card.Title>
                             <Card.Text>

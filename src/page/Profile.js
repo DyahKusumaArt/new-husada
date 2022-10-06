@@ -24,7 +24,7 @@ function Profile() {
                                 <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/register" className="text-white">Profile</Nav.Link>
+                                <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                         <Nav.Link href="/" className="p-2">Logout</Nav.Link>
