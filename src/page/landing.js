@@ -43,19 +43,19 @@ function Landing() {
     }];
     const Layanan = [{
         nama: "Jasa Pengobatan",
-        label: "Penghusada, Balian, Dukun, Tabib"
+        label: "pengobatan"
     }, {
         nama: "Konsultasi",
-        label: "Penghusada, Balian, Dukun, Tabib"
+        label: "konsultasi"
     }, {
         nama: "Pengobatan Alternatif",
-        label: "Chiropractic, Akupuntur, dan lainnya"
+        label: "alternatif"
     }, {
         nama: "Jasa Populer",
-        label: "Pawang Hujan, Pelindung diri, dan lainnya"
+        label: "populer"
     }, {
         nama: "Marketplace",
-        label: "Jual Beli dan penawaran lainnya"
+        label: "marketplace"
     }];
     return (
         <div>
@@ -85,9 +85,9 @@ function Landing() {
                 <div className=" d-flex flex-row">
                     <Container className=" d-flex flex-row" >
                         {Layanan.map((item, key) =>
-                                <Card className=" " key={key} style={{ width: '16rem', marginRight: '15px', marginTop:'5px', height:'6rem' }}>
+                                <Card className=" " key={key} style={{ width: '16rem', marginRight: '15px', marginTop:'5px', height:'6rem' , fontSize:'10px'}}>
                                     <Card.Body>
-                                        <Card.Title>{item.nama}</Card.Title>
+                                        <Card.Title style={{ fontSize:'15px'}}>{item.nama}</Card.Title>
                                         {/* <Card.Text>
                                             {item.label}
                                         </Card.Text> */}

@@ -12,6 +12,8 @@ import Dukun from './page/dukun';
 import Tabib from './page/tabib';
 import Penghusada from './page/penghusada';
 import Balian from './page/balian';
+import Jasapopuler from './page/jasapop';
+import Kjawa from './page/kalendarjawa';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route exact path="/tabib" component={Tabib} />
         <Route exact path="/penghusada" component={Penghusada} />
         <Route exact path="/balian" component={Balian} />
+        <Route exact path="/jasa" component={Jasapopuler} />
+        <Route exact path="/kjawa" component={Kjawa} />
       </Switch>
     </Router>
     </div>
