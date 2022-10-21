@@ -1,18 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import { Card, Row, Col, } from "react-bootstrap";
-import * as KalenderJawa from "@kalenderjawa/pustaka";
+import { BalineseDate } from "balinese-date-js-lib";
 import HeaderOff from "../notlogin/header";
 
-const Kjawa = () => {
-    const [kjawa, setK] = useState([]);
-    const achoba = KalenderJawa.sasi('mukarom', 2022).then(({ k, s }) => { setK(s.get(k)) });
-    const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-    console.log(kjawa);
-    const flatarray = kjawa.filter((d, key) => d);
-
-    console.log(flatarray);
+const Kbali = () => {
+    const now = new BalineseDate(new Date());
+    const baru = new BalineseDate();
+    console.log(now)
+    console.log(baru)
+    console.log(now.saka); // show the saka
+    console.log(now.sasih.name); // show the sasih name
+    console.log(now.wuku.name); // show the wuku name
     return (
         <div>
             <div>
@@ -22,8 +21,8 @@ const Kjawa = () => {
                 <Row >
                     <div className="d-flex justify-content-between ">
                         <div></div>
-                        <h1 className="pb-4"> Kalender Jawa</h1>
-                        <div className="text-center">Kalender Bali</div>
+                        <h1 className="pb-4"> Kalender Bali</h1>
+                        <div className="text-center">Kalender Jawa</div>
                     </div>
 
                 </Row>
@@ -49,4 +48,4 @@ const Kjawa = () => {
     );
 };
 
-export default Kjawa;
+export default Kbali;

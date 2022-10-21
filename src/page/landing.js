@@ -7,6 +7,7 @@ import tiga from '../assets/image/3.jpg';
 import pengobatan from '../assets/image/pengobatan.jpg';
 import "../App.css";
 import { Link } from "react-router-dom";
+import HeaderOff from "../notlogin/header";
 
 function Landing() {
     const [index, setIndex] = useState(0);
@@ -43,44 +44,29 @@ function Landing() {
     }];
     const Layanan = [{
         nama: "Jasa Pengobatan",
-        label: "pengobatan"
+        label: "pengobatan",
+        link:"/obatoff"
     }, {
         nama: "Konsultasi",
-        label: "konsultasi"
+        label: "konsultasi",
+        link:"/konsultasi"
     }, {
         nama: "Pengobatan Alternatif",
-        label: "alternatif"
+        label: "alternatif",
+        link: "/alternatif"
     }, {
         nama: "Jasa Populer",
-        label: "populer"
+        label: "populer",
+        link: "/populer"
+
     }, {
         nama: "Marketplace",
-        label: "marketplace"
+        label: "marketplace",
+        link: "/marketplace"
     }];
     return (
         <div>
-            <div className="header p-2" >
-                <Navbar collapseOnSelect expand="lg" className="atasH">
-                    <Container className="" >
-                        <div>
-                            <Navbar.Brand href="#home" className="brand text-white" >Husada Center</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
-                        </div>
-                        <Navbar.Collapse id="responsive-navbar-nav" >
-                            <Nav className="me-auto text-white">
-                                <Nav.Link href="#features" className="text-white">Informasi</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Layanan</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
-                            </Nav>
-                            <Nav>
-                                <Nav.Link href="/register" className="text-white">Register</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                        <Nav.Link href="/login" className="p-2">Login</Nav.Link>
-                    </Container>
-                </Navbar>
-
-            </div>
+           <HeaderOff/>
             <div>
                 <div className=" d-flex flex-row">
                     <Container className=" d-flex flex-row" >
@@ -91,7 +77,7 @@ function Landing() {
                                         {/* <Card.Text>
                                             {item.label}
                                         </Card.Text> */}
-                                        <Button variant="primary" href="/pengobatan">Go somewhere</Button>
+                                        <Button variant="primary" href={item.link}>Go somewhere</Button>
                                     </Card.Body>
                                 </Card>
                         )}

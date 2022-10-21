@@ -1,140 +1,69 @@
 
-import { Form, Button, Row, Navbar, Container, Nav, Modal, Card } from "react-bootstrap";
+import { Form, Button, Row, Col, Container, Nav, Modal, Card } from "react-bootstrap";
 import React from "react";
 import profile from '../assets/image/profile-png.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMessage, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../App.css"
+import Headerlog from "../aflogin/header";
 const Balian = () => {
+    const data = [{
+        Nama: "I Gede Herry",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "1"
+    }, {
+        Nama: "I Made Teguh",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "2"
+    }, {
+        Nama: "I Gede Herry",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "3"
+    }, {
+        Nama: "I Made Teguh",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "4"
+    }, {
+        Nama: "I Gede Herry",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "5"
+    }, {
+        Nama: "I Made Teguh",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "6"
+    }, {
+        Nama: "I Gede Herry",
+        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
+        Id: "7"
+    }];
     return (
         <div >
-            <div className="header p-2 " >
-                <Navbar collapseOnSelect expand="lg" className="atasH">
-                    <Container className="" >
-                        <div>
-                            <Navbar.Brand href="#home" className="brand text-white" >Husada Center</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        </div>
-                        <Navbar.Collapse id="responsive-navbar-nav" >
-                            <Nav className="me-auto text-white">
-                                <Nav.Link href="#features" className="text-white">Informasi</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Layanan</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
-                            </Nav>
-                            <Nav>
-                                <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                        <Nav.Link href="/" className="p-2">Logout</Nav.Link>
-                    </Container>
-                </Navbar>
-            </div>
-            <div  style={{background:'#162447'}}>
+            <Headerlog />
+            <div style={{ background: '#162447', height: '100%' }}>
                 <br></br>
                 <p className="text-lg-center text-white">Jasa Pengobatan Balian</p>
-                <hr/>
-                <Container className="mx-auto d-flex justify-content-between">
-                    <Card style={{ width: '28rem',border:"primary"}}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}}/>
-                        <Card.Body>
-                            <Card.Title>I Gede Herry</Card.Title>
-                            <Card.Text>
-                                Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di dada
-                            </Card.Text>
-                            <Button variant="primary" href="/pengobatan">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card className="mx-5" style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>I Made Teguh</Card.Title>
-                            <Card.Text>
-                                Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di kaki
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>Tery Sujana</Card.Title>
-                            <Card.Text>
-                            Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di pundak
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                </Container>
-                <Container className="mx-auto d-flex justify-content-between mt-5">
-                    <Card style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>Made Alvin</Card.Title>
-                            <Card.Text>
-                            Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di lutut
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card className="mx-5" style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>Komang Tresna</Card.Title>
-                            <Card.Text>
-                            Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman menyembuhkan tidak bisa melihat
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '28rem',border:"primary",  }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>Dwiyanti</Card.Title>
-                            <Card.Text>
-                            Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di dada
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                </Container>
-                <Container className="mx-auto d-flex justify-content-between mt-5">
-                    <Card style={{ width: '28rem',border:"primary"}}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}}/>
-                        <Card.Body>
-                            <Card.Title>I Gede Herry</Card.Title>
-                            <Card.Text>
-                                Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di dada
-                            </Card.Text>
-                            <Button variant="primary" href="/pengobatan">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card className="mx-5" style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>I Made Teguh</Card.Title>
-                            <Card.Text>
-                                Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di kaki
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
-                    <Card style={{ width: '28rem',border:"primary", }}>
-                        <Card.Img variant="top" src={profile}  style={{height:'140px', width:'280px', paddingLeft:'100px' ,}} />
-                        <Card.Body>
-                            <Card.Title>Tery Sujana</Card.Title>
-                            <Card.Text>
-                            Pengalaman menyembuhkan orang sakit <br/>
-                                pengalaman meredakan nyeri di pundak
-                            </Card.Text>
-                            <Button variant="primary">Click Here !</Button>
-                        </Card.Body>
-                    </Card>
+                <hr />
+                <Container className="mx-auto d-flex mt-5">
+                    <Row xs={1} md={3} className="">
+                        {data.map((item, key) =>
+                            <Col style={{ width: '33%' }} className='text-center px-5'>
+                                <Card className="obtoffe mb-5" key={key} >
+                                    <div className="mt-3"><Card.Img variant="top" src={profile} style={{ height: '100px', width: '130px', borderRadius: '15%' }} /></div>
+                                    <Card.Body>
+                                        <Card.Title style={{ fontSize: '15px' }}>{item.Nama}</Card.Title>
+                                        <Card.Text>
+                                            {item.Deskripsi}
+                                        </Card.Text>
+                                        <div className="d-flex justify-content-between pt-3 px-5 text-dark">
+                                            <FontAwesomeIcon icon={faMessage} size="xl" className="text-left" style={{ width: '70px' }} />
+                                            <FontAwesomeIcon icon={faPhone} size="xl" className="text-left" />
+                                        </div>
+
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        )}
+                    </Row>
                 </Container>
             </div>
 
