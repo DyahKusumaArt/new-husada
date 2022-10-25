@@ -78,11 +78,7 @@ function Profile() {
                                 <Form >
 
                                     {/* change password */}
-                                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                                        <Form.Label>Old Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" />
-                                    </Form.Group>
-
+                                 
                                     <Form.Group className="mb-3" controlId="formBasicPassword">
                                         <Form.Label>New Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" />

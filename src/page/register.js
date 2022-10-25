@@ -1,7 +1,7 @@
 
 import { Form, Button, Row } from "react-bootstrap";
 import React from "react";
-import login from '../assets/image/login.jpg';
+import login from '../assets/image/husada.jpeg';
 import "../App.css"
 const Register = () => {
     const onFinish = values => {

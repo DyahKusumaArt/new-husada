@@ -1,22 +1,57 @@
 import React from "react";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import { Card, Row, Col, } from "react-bootstrap";
 import * as KalenderJawa from "@kalenderjawa/pustaka";
 import HeaderOff from "../notlogin/header";
 
 const Kjawa = () => {
-    const [kjawa, setK] = useState([]);
-    const achoba = KalenderJawa.sasi('mukarom', 2022).then(({ k, s }) => { setK(s.get(k)) });
     const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+    const [coba, setCoba] = useState("");
+    const bulan = (current.getMonth());
+    console.log(bulan)
+    console.log(coba);
+    const [kjawa, setK] = useState([]);
+
+    const achoba = KalenderJawa.sasi(coba, 2022).then(({ k, s }) => { setK(s.get(k)) });
     console.log(kjawa);
     const flatarray = kjawa.filter((d, key) => d);
-
     console.log(flatarray);
+
+    useEffect(() => {
+        if (bulan == 1) {
+            setCoba('mukarom');
+        } else if (bulan == 2) {
+            setCoba('sapar');
+        } else if (bulan == 3) {
+            setCoba('robiulawal');
+        } else if (bulan == 4) {
+            setCoba('robiulakir');
+        } else if (bulan == 5) {
+            setCoba('jumadilawal');
+        } else if (bulan == 6) {
+            setCoba('jumadilakir');
+        } else if (bulan == 7) {
+            setCoba('rojab');
+        } else if (bulan == 8) {
+            setCoba('sakban');
+        } else if (bulan == 9) {
+            setCoba('romadon');
+        } else if (bulan == 10) {
+            setCoba('sawal');
+        } else if (bulan == 11) {
+            setCoba('dulkodah');
+        } else if (bulan == 12) {
+            setCoba('dulkijah');
+        }
+    }, [coba]);
+
+
+
+
     return (
         <div>
             <div>
-                <HeaderOff/>
+                <HeaderOff />
             </div>
             <Row className="mt-5">
                 <Row >
@@ -34,7 +69,7 @@ const Kjawa = () => {
                                 <h3 >{Object.keys(data)} </h3>
                                 <h2 className='product__title'>{data[index + 1].dinten}</h2>
                                 <p className='product__description '>
-                                    {data[index + 1].neptu} <span > {data[index + 1].pasaran} </span>   
+                                    {data[index + 1].neptu} <span > {data[index + 1].pasaran} </span>
                                 </p>
 
                             </Card.Body>
@@ -43,7 +78,7 @@ const Kjawa = () => {
                 ))}
             </Row>
             <div>
-                
+
             </div>
         </div>
     );
