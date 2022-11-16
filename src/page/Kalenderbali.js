@@ -29,7 +29,7 @@ const Kbali = () => {
                                 {/* <input type="date" id="start" placeholder="Search ..." onChange={(e) => setTnggl(e.target.value)} /> */}
                             </div>
                             <h1 className="text-center"> Kalender Bali</h1>
-                            <div className="text-center">Kalender Jawa</div>
+                            <div className="text-center" ><a href="/kjawa">Kalender Jawa</a> </div>
                         </div>
                     </Container>
                 </Row>

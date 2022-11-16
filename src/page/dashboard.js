@@ -4,6 +4,7 @@ import React from "react";
 import profile from '../assets/image/profile-png.png'
 import "../App.css"
 const Dashboard = () => {
+    
     return (
         <div >
             <div className="header p-2 " >
@@ -15,8 +16,7 @@ const Dashboard = () => {
                         </div>
                         <Navbar.Collapse id="responsive-navbar-nav" >
                             <Nav className="me-auto text-white">
-                                <Nav.Link href="#features" className="text-white">Informasi</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Layanan</Nav.Link>
+                                <Nav.Link href="/kjawa" className="text-white">Kalender</Nav.Link>
                                 <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
                             </Nav>
                             <Nav>
@@ -28,10 +28,10 @@ const Dashboard = () => {
                 </Navbar>
             </div>
             <div className="mt-3 mb-5">
-                <p className="text-lg-center">Husada Center "setelah login memilih fitur untuk pengobatan, konsultasi dan lainnya"</p>
+                <p className="text-lg-center"> LAYANAN </p>
                 <hr/>
                 <Container className="mx-auto d-flex justify-content-between">
-                    <Card style={{ width: '28rem' , height:'250px'}}>
+                    <Card style={{ width: '28rem' , height:'250px', background:'#14ae5c'}}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Jasa Pengobatan</Card.Title>
@@ -42,7 +42,7 @@ const Dashboard = () => {
                             <Button variant="primary" href="/pengobatan">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '28rem', height:'250px' }}>
+                    <Card className="mx-5" style={{ width: '28rem', height:'250px' ,background:'#14ae5c' }}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Konsultasi</Card.Title>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '28rem', height:'250px' }}>
+                    <Card style={{ width: '28rem', height:'250px', background:'#14ae5c' }}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Pengobatan Alternatif</Card.Title>
@@ -66,7 +66,7 @@ const Dashboard = () => {
                     </Card>
                 </Container>
                 <Container className="mx-auto d-flex justify-content-between mt-5">
-                    <Card style={{ width: '28rem', height:'250px' }}>
+                    <Card style={{ width: '28rem', height:'250px', background:'#14ae5c' }}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Jasa Populer</Card.Title>
@@ -77,7 +77,7 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card className="mx-5" style={{ width: '28rem', height:'250px' }}>
+                    <Card className="mx-5" style={{ width: '28rem', height:'250px', background:'#14ae5c' }}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Marketplace</Card.Title>
@@ -88,7 +88,7 @@ const Dashboard = () => {
                             <Button variant="primary">Click Here !</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '28rem', height:'250px'  }}>
+                    <Card style={{ width: '28rem', height:'250px' , background:'#14ae5c' }}>
                         {/* <Card.Img variant="top" src={profile} /> */}
                         <Card.Body>
                             <Card.Title>Soon</Card.Title>

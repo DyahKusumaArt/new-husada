@@ -58,7 +58,7 @@ const Kjawa = () => {
                     <div className="d-flex justify-content-between ">
                         <div></div>
                         <h1 className="pb-4"> Kalender Jawa</h1>
-                        <div className="text-center">Kalender Bali</div>
+                        <div className="text-center" ><a href="/kbali">Kalender Bali</a> </div>
                     </div>
 
                 </Row>

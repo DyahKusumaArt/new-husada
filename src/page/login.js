@@ -1,16 +1,26 @@
 
 import { Form, Button, Row } from "react-bootstrap";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import login from '../assets/image/husada.jpeg';
 import "../App.css"
-const Login = () => {
-    const onFinish = values => {
-        console.log('Success:', values);
-    };
+import { useHistory, Link } from "react-router-dom";
+import axios from "axios";
+function ULogin (){
 
-    const onFinishFailed = errorInfo => {
-        console.log('Failed:', errorInfo);
-    };
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [msg, setMsg] = useState('');
+
+    //login
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:5000/login/', {
+            email: email,
+            password: password,
+        }, { withCredentials: 'true' })
+            history.push("/dashboard");
+    }
 
     return (
         <div className="login-page">
@@ -18,20 +28,25 @@ const Login = () => {
                 <div className="illustration-wrapper">
                     <img src={login} alt="Login" />
                 </div>
-                <Form className="login-form"
-                >
+                <Form onSubmit={handleSubmit} className="login-form" >
                     <p className="form-title">Welcome back</p>
                     <p>Login to Bali Husada</p>
+                    <p className="has-text-centered"></p>
+                    {msg ? (
+                        <div className="alert alert-danger text-center" role="alert">
+                            {msg}
+                        </div>)
+                        : (<></>)}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Please input your email" required />
+                        <Form.Control required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Please input your email" />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder=" Please input your Password" required />
+                        <Form.Control required onChange={(e) => setPassword(e.target.value)} type="password" placeholder=" Please input your Password" />
                     </Form.Group>
 
                     {/* <antd.Form.Item name="remember" valuePropName="checked">
@@ -39,7 +54,7 @@ const Login = () => {
                     </antd.Form.Item> */}
 
                     <Row className="mx-auto">
-                        <Button variant="success" href="/dashboard" type="submit">
+                        <Button variant="success" type="submit">
                             Save
                         </Button>
                     </Row>
@@ -51,4 +66,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default ULogin;

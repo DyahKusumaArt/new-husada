@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import Landing from './page/landing';
-import Login from './page/login';
 import Register from './page/register';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
@@ -16,6 +15,8 @@ import Jasapopuler from './page/jasapop';
 import Kjawa from './page/kalendarjawa';
 import JasaObtOff from './notlogin/Jasaobatoff';
 import Kbali from './page/Kalenderbali';
+import ULogin from './page/login';
+import React from 'react';
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/login" component={ULogin} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/profile"  component={Profile} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/pengobatan" component={Pengobatan} />
         <Route exact path="/dukun" component={Dukun} />

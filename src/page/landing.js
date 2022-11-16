@@ -77,7 +77,7 @@ function Landing() {
                                         {/* <Card.Text>
                                             {item.label}
                                         </Card.Text> */}
-                                        <Button variant="primary" href={item.link}>Go somewhere</Button>
+                                        <Button variant="primary" href={item.link}>Click Here</Button>
                                     </Card.Body>
                                 </Card>
                         )}
