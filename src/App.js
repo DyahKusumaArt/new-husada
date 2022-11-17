@@ -19,6 +19,7 @@ import ULogin from './page/login';
 import React from 'react';
 
 function App() {
+  const item = localStorage.getItem('isLogin');
   return (
     <div className='App'> 
     <Router>
@@ -29,13 +30,9 @@ function App() {
         <Route exact path="/profile"  component={Profile} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/pengobatan" component={Pengobatan} />
-        <Route exact path="/dukun" component={Dukun} />
-        <Route exact path="/tabib" component={Tabib} />
-        <Route exact path="/penghusada" component={Penghusada} />
-        <Route exact path="/balian" component={Balian} />
         <Route exact path="/jasa" component={Jasapopuler} />
-        <Route exact path="/kjawa" component={Kjawa} />
         <Route exact path="/obatoff" component={JasaObtOff} />
+        <Route exact path="/kjawa" component={Kjawa} />
         <Route exact path="/kbali" component={Kbali} />
       </Switch>
     </Router>

@@ -3,37 +3,16 @@ import { Form, Button, Row, Navbar, Container, Nav, Modal, Card } from "react-bo
 import React, { useState } from 'react';
 import profile from '../assets/image/profile-png.png'
 import "../App.css"
+import Headerlog from "../aflogin/header";
 function Profile() {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
         <>
-            <div className="header p-2" >
-                <Navbar collapseOnSelect expand="lg" className="atasH">
-                    <Container className="" >
-                        <div>
-                            <Navbar.Brand href="#home" className="brand text-white" >Husada Center</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        </div>
-                        <Navbar.Collapse id="responsive-navbar-nav" >
-                            <Nav className="me-auto text-white">
-                                <Nav.Link href="#features" className="text-white">Informasi</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Layanan</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
-                            </Nav>
-                            <Nav>
-                                <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                        <Nav.Link href="/" className="p-2">Logout</Nav.Link>
-                    </Container>
-                </Navbar>
-
-            </div>
+            <Headerlog/>
             <div className="d-center">
-                <Card className="p-3" style={{ background: '#C92905' }}>
+                <Card className="p-3" style={{ background: '#13653f' }}>
 
                     <Form className="text-white">
                         <h3>Edit Profile</h3>
@@ -62,23 +41,19 @@ function Profile() {
                         <Button variant="primary" onClick={handleShow} className="mb-3">
                             Edit Password
                         </Button>
-
                         <Modal
                             show={show}
                             onHide={handleClose}
                             backdrop="static"
                             keyboard={false}
                             centered
-
                         >
                             <Modal.Header closeButton>
                                 <Modal.Title>Edit Password</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                                 <Form >
-
                                     {/* change password */}
-                                 
                                     <Form.Group className="mb-3" controlId="formBasicPassword">
                                         <Form.Label>New Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" />
@@ -88,19 +63,17 @@ function Profile() {
                                         <Form.Label>Confirm Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" />
                                     </Form.Group>
-
                                 </Form>
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
-                                <Button variant="primary">Save</Button>
+                                <Button variant="primary" type="submit">Save</Button>
                             </Modal.Footer>
                         </Modal >
                         <Row>
-                            <Button className="btn btn-outline-primary btn-lg btn-block text-white" >
-
+                            <Button className="btn btn-outline-primary btn-lg btn-block text-white" type="submit">
                                 Save Changes
                             </Button>
                         </Row>

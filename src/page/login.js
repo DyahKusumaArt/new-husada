@@ -5,7 +5,7 @@ import login from '../assets/image/husada.jpeg';
 import "../App.css"
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
-function ULogin (){
+function ULogin() {
 
     const history = useHistory();
     const [email, setEmail] = useState('');
@@ -18,10 +18,20 @@ function ULogin (){
         axios.post('http://localhost:5000/login/', {
             email: email,
             password: password,
-        }, { withCredentials: 'true' })
-            history.push("/dashboard");
+        }, { withCredentials: 'true' }).then((res) => {
+            
+            console.log(res.data.role)
+            if(res.data.role === "Admin"){
+                setMsg("Error!! Create new Account")
+            }else{
+                localStorage.setItem('isLogin', res.data.id);
+                history.push("/dashboard");
+            }
+        }).catch((error) => {
+            console.log(error)
+            setMsg(error.response.data.msg)
+        });
     }
-
     return (
         <div className="login-page">
             <div className="login-box">

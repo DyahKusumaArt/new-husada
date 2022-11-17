@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Nav, Navbar, Container, Carousel, Card, Row, Col, Button } from "react-bootstrap";
-import satu from '../assets/image/1.jpg';
-import dua from '../assets/image/2.jpg';
-import tiga from '../assets/image/3.jpg';
+import satu from '../assets/image/first.jpeg';
+import dua from '../assets/image/first.jpeg';
+import tiga from '../assets/image/first.jpeg';
 import pengobatan from '../assets/image/pengobatan.jpg';
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -43,51 +43,32 @@ function Landing() {
         label: "Overview"
     }];
     const Layanan = [{
-        nama: "Jasa Pengobatan",
+        nama: "Pengobatan",
         label: "pengobatan",
-        link:"/obatoff"
+        link: "/login"
     }, {
-        nama: "Konsultasi",
-        label: "konsultasi",
-        link:"/konsultasi"
-    }, {
-        nama: "Pengobatan Alternatif",
+        nama: "Alternatif",
         label: "alternatif",
-        link: "/alternatif"
+        link: "/login"
     }, {
         nama: "Jasa Populer",
         label: "populer",
-        link: "/populer"
+        link: "/login"
 
     }, {
         nama: "Marketplace",
         label: "marketplace",
-        link: "/marketplace"
+        link: "/login"
     }];
     return (
         <div>
-           <HeaderOff/>
+            <HeaderOff />
             <div>
-                <div className=" d-flex flex-row">
-                    <Container className=" d-flex flex-row" >
-                        {Layanan.map((item, key) =>
-                                <Card className=" " key={key} style={{ width: '16rem', marginRight: '15px', marginTop:'5px', height:'6rem' , fontSize:'10px'}}>
-                                    <Card.Body>
-                                        <Card.Title style={{ fontSize:'15px'}}>{item.nama}</Card.Title>
-                                        {/* <Card.Text>
-                                            {item.label}
-                                        </Card.Text> */}
-                                        <Button variant="primary" href={item.link}>Click Here</Button>
-                                    </Card.Body>
-                                </Card>
-                        )}
-                    </Container>
-                </div>
-
+    
                 <Carousel activeIndex={index} onSelect={handleSelect} >
 
                     <Carousel.Item >
-                        <img style={{ height: "660px" }}
+                        <img style={{ height: "760px" }}
                             className="d-block w-100"
                             src={dua}
                             url
@@ -100,7 +81,7 @@ function Landing() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            style={{ height: "660px" }}
+                            style={{ height: "760px" }}
                             className="d-block w-100"
                             src={satu}
                             alt="Second slide"
@@ -113,7 +94,7 @@ function Landing() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            style={{ height: "660px" }}
+                            style={{ height: "760px" }}
                             className="d-block w-100"
                             src={tiga}
                             alt="Third slide"
@@ -129,6 +110,26 @@ function Landing() {
                     </Carousel.Item>
                 </Carousel>
             </div>
+            <div className=" d-flex flex-row mt-5 mb-5">
+                    <Container className="" >
+                        <Row className="justify">
+                            {Layanan.map((item, key) =>
+                                <Col  xs={12} md={6} lg={3} >
+                                    <Card  className=" d-flex flex-row justify-content-between " key={key} >
+                                        <Card.Body style={{background: '#13653f'}}>
+                                            <Card.Title style={{ fontSize: '15px' }}>{item.nama}</Card.Title>
+                                            {/* <Card.Text>
+                                            {item.label}
+                                        </Card.Text> */}
+                                            <Button variant="primary" href={item.link}>Go</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            )}
+                        </Row>
+                    </Container>
+                </div>
+
             <Container className="shadow px- mb-5 blue" >
                 <h3 className="text-center p-5">Informasi Tanaman dan Obat Tradisional</h3>
                 <Row xs={1} md={3} className="g-4">

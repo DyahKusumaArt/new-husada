@@ -6,7 +6,6 @@ import { useState } from "react";
 import "../App.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Register = () => {
     const history = useHistory();
@@ -15,9 +14,8 @@ const Register = () => {
     const [confPassword, setConfPassword] = useState('');
     const [full_name, setFullname] = useState('');
     const [phone, setPhone] = useState('');
-    const [role, setRole] = useState('Employee');
+    const [role, setRole] = useState('Customer');
     const [msg, setMsg] = useState('');
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios.post('http://localhost:5000/users/', {
@@ -28,7 +26,6 @@ const Register = () => {
             confPassword: confPassword,
             role: role
         }, { withCredentials: 'true' }).then(() => {
-            localStorage.setItem('email', email);
             history.push("/login");
         }).catch((error) => {
             console.log(error)
@@ -42,7 +39,7 @@ const Register = () => {
                 <div className="illustration-wrapper">
                     <img src={login} alt="Login" style={{ height: '640px' }} />
                 </div>
-                <Form className="login-form"
+                <Form className="login-form" onSubmit={handleSubmit}
                 >
                     <p className="form-title">Create Account</p>
                     <p>Register Here</p>
@@ -72,7 +69,7 @@ const Register = () => {
                         />
                     </Form.Group>
                     <Row className="mx-auto">
-                        <Button variant="success" size="lg" href="/login" type="submit" >
+                        <Button variant="success" size="lg" type="submit" >
                             Save
                         </Button>
                     </Row>

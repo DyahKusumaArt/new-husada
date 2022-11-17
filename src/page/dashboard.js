@@ -3,30 +3,12 @@ import { Form, Button, Row, Navbar, Container, Nav, Modal, Card } from "react-bo
 import React from "react";
 import profile from '../assets/image/profile-png.png'
 import "../App.css"
+import Headerlog from "../aflogin/header";
 const Dashboard = () => {
     
     return (
         <div >
-            <div className="header p-2 " >
-                <Navbar collapseOnSelect expand="lg" className="atasH">
-                    <Container className="" >
-                        <div>
-                            <Navbar.Brand href="#home" className="brand text-white" >Husada Center</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        </div>
-                        <Navbar.Collapse id="responsive-navbar-nav" >
-                            <Nav className="me-auto text-white">
-                                <Nav.Link href="/kjawa" className="text-white">Kalender</Nav.Link>
-                                <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
-                            </Nav>
-                            <Nav>
-                                <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                        <Nav.Link href="/" className="p-2">Logout</Nav.Link>
-                    </Container>
-                </Navbar>
-            </div>
+            <Headerlog></Headerlog>
             <div className="mt-3 mb-5">
                 <p className="text-lg-center"> LAYANAN </p>
                 <hr/>
