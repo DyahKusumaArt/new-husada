@@ -17,6 +17,7 @@ import JasaObtOff from './notlogin/Jasaobatoff';
 import Kbali from './page/Kalenderbali';
 import ULogin from './page/login';
 import React from 'react';
+import Marketplace from './page/marketplace';
 
 function App() {
   const item = localStorage.getItem('isLogin');
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/obatoff" component={JasaObtOff} />
         <Route exact path="/kjawa" component={Kjawa} />
         <Route exact path="/kbali" component={Kbali} />
+        <Route exact path="/marketplace" component={Marketplace} />
       </Switch>
     </Router>
     </div>

@@ -75,8 +75,8 @@ function Landing() {
                             alt="First slide"
                         />
                         <Carousel.Caption style={{ color: "black" }} className="shadow p">
-                            <h3>Slide Pertama</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            {/* <h3>Slide Pertama</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -88,8 +88,8 @@ function Landing() {
                         />
 
                         <Carousel.Caption style={{ color: "black" }} className="shadow p">
-                            <h3>Slide Kedua</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            {/* <h3>Slide Kedua</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -101,11 +101,11 @@ function Landing() {
                         />
 
                         <Carousel.Caption style={{ color: "black" }} className="shadow p">
-                            <h3>Slide Ketiga</h3>
+                            {/* <h3>Slide Ketiga</h3>
                             <p>
                                 deskripsi
                                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+                            </p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

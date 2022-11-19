@@ -24,15 +24,15 @@ const Pengobatan = () => {
         Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
         Id: "4"
     }, {
-        Nama: "Komang Tresna",
+        Nama: "Wayan Tegeh",
         Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
         Id: "5"
     }, {
-        Nama: "I Made Teguh",
+        Nama: "Made Cening",
         Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
         Id: "6"
     }, {
-        Nama: "I Gede Herry",
+        Nama: "Yan Bawe",
         Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
         Id: "7"
     }];
@@ -41,7 +41,7 @@ const Pengobatan = () => {
            <Headerlog/>
             <div style={{ background: '', height: '100%' }}>
                 <br></br>
-                <p className="text-lg-center text-dark">Jasa Pengobatan Dukun</p>
+                <p className="text-center text-dark">Jasa Pengobatan Dukun</p>
                 <hr />
                 <Container className="mx-auto d-flex mt-5">
                     <Row  className="">
