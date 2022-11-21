@@ -1,41 +1,27 @@
 
 import { Form, Button, Row, Navbar, Container, Nav, Col, Card } from "react-bootstrap";
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import profile from '../assets/image/profile-png.png'
 import "../App.css"
 import Headerlog from "../aflogin/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage, faPhone } from "@fortawesome/free-solid-svg-icons";
 const Pengobatan = () => {
-    const data = [{
-        Nama: "Made Alvin",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "1"
-    }, {
-        Nama: "Komang Tresna",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "2"
-    }, {
-        Nama: "I Gede Herry",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "3"
-    }, {
-        Nama: "I Made Teguh",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "4"
-    }, {
-        Nama: "Wayan Tegeh",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "5"
-    }, {
-        Nama: "Made Cening",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "6"
-    }, {
-        Nama: "Yan Bawe",
-        Deskripsi: " Pengalaman menyembuhkan orang sakit pengalaman meredakan nyeri di dada",
-        Id: "7"
-    }];
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const getData = async () => {
+        axios.get("https://api.husadacenter.id/balian", { withCredentials: 'true' })
+            .then((response) => {
+                setData(response.data);
+                console.log(data)
+            });
+    };
+
     return (
         <div >
            <Headerlog/>
@@ -50,14 +36,17 @@ const Pengobatan = () => {
                                 <Card className="obtoffe mb-5" key={key} >
                                     <div className="mt-3"><Card.Img variant="top" src={profile} style={{ height: '100px', width: '130px', borderRadius: '15%' }} /></div>
                                     <Card.Body>
-                                        <Card.Title style={{ fontSize: '15px' }}>{item.Nama}</Card.Title>
+                                        <Card.Title style={{ fontSize: '15px' }}>{item.name}</Card.Title>
                                         <Card.Text>
-                                            {item.Deskripsi}
+                                            {item.description}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            {item.address}
                                         </Card.Text>
                                         <div className="d-flex justify-content-between pt-3 px-3 text-dark">
                                             <div></div>
                                             <FontAwesomeIcon icon={faMessage} size="xl" className="text-left" style={{ width: '70px' }} />
-                                            <FontAwesomeIcon icon={faPhone} size="xl" className="text-left" />
+                                            <FontAwesomeIcon icon={faPhone} size="xl" className="text-left" href={"tel:"+item.phone}/>
                                             <div></div>
                                         </div>
                                     </Card.Body>
