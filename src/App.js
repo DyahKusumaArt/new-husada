@@ -19,6 +19,7 @@ import ULogin from './page/login';
 import React from 'react';
 import Marketplace from './page/marketplace';
 import Kalendar from './page/kalendarjawa';
+import PengobatanAlternatif from './page/balian';
 
 function App() {
   const item = localStorage.getItem('isLogin');
@@ -35,7 +36,7 @@ function App() {
         <Route exact path="/jasa" component={Jasapopuler} />
         <Route exact path="/obatoff" component={JasaObtOff} />
         <Route exact path="/kjawa" component={Kalendar} />
-        <Route exact path="/kbali" component={Kbali} />
+        <Route exact path="/alternatif" component={PengobatanAlternatif} />
         <Route exact path="/marketplace" component={Marketplace} />
       </Switch>
     </Router>

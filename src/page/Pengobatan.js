@@ -45,12 +45,12 @@ const Pengobatan = () => {
                                         </Card.Text>
                                         <div className="d-flex justify-content-between pt-3 px-3 text-dark">
                                             <div></div>
-                                            <a href="mailto:ketutanik@gmail.com" >
-                                                <FontAwesomeIcon icon={faMessage} size="xl" className="text-left" style={{ width: '70px' }} />
-                                            </a>
-
-                                            <a href="tel:081338588909" >
-                                                <FontAwesomeIcon icon={faPhone} size="xl" className="text-left" />
+                                            <a href={"https://wa.me/+62"+item.phone}
+                                            class="whatsapp_float" 
+                                            target="_blank"
+                                            body="hello world"
+                                            rel="noopener noreferrer">
+                                                <Button>Hubungi Saya</Button>
                                             </a>
                                             <div></div>
                                         </div>

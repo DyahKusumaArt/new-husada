@@ -7,19 +7,19 @@ import Headerlog from "../aflogin/header";
 const Dashboard = () => {
     const layanan = [
         {
-            title: 'jasa pengobatan',
-            desktripsi: 'seluruh jasa pengobatan dan konsultasi',
+            title: 'Jasa Pengobatan',
+            desktripsi: 'Seluruh jasa pengobatan dan konsultasi',
             link: '/pengobatan'
         },
         {
             title: 'Marketplace',
-            desktripsi: 'seluruh obat yang ada',
+            desktripsi: 'Seluruh obat yang ada',
             link: '/marketplace'
         },
         {
-            title: 'soon',
+            title: 'Pengobatan Alternatif',
             desktripsi: 'Soon',
-            link: '/dashboard'
+            link: '/alternatif'
         }]
     return (
         <div >
