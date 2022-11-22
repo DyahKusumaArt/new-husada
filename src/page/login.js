@@ -15,7 +15,7 @@ function ULogin() {
     //login
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('https://api.husadacenter.id/login', {
+        axios.post('http://localhost:5000/login/', {
             email: email,
             password: password,
         }, { withCredentials: 'true' }).then((res) => {

@@ -15,7 +15,7 @@ const Headerlog = () => {
                     <Navbar.Collapse id="responsive-navbar-nav" >
                         <Nav className="me-auto text-white">
                             <Nav.Link href="/kjawa" className="text-white">Kalender</Nav.Link>
-                            <Nav.Link href="#features" className="text-white">Peta</Nav.Link>
+                           
                         </Nav>
                         <Nav>
                             <Nav.Link href="/profile" className="text-white">Profile</Nav.Link>

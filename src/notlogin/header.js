@@ -15,7 +15,7 @@ const HeaderOff = () => {
                         <Nav className="me-auto text-white">
                             <Nav.Link href="kjawa" className="text-white">Kalender</Nav.Link>
                             <Nav.Link href="/login" className="text-white">Layanan</Nav.Link>
-                            <Nav.Link href="/login" className="text-white">Peta</Nav.Link>
+                            
                         </Nav>
                         <Nav>
                             <Nav.Link href="/register" className="text-white">Register</Nav.Link>
