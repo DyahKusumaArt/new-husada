@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Nav, Navbar, Container, Carousel, Card, Row, Col, Button } from "react-bootstrap";
 import satu from '../assets/image/first.jpeg';
 import dua from '../assets/image/first.jpeg';
@@ -14,34 +14,20 @@ function Landing() {
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
-    const dataObat = [{
-        nama: "obat 1",
-        label: "Overview"
-    }, {
-        nama: "obat 2",
-        label: "Overview"
-    }, {
-        nama: "obat 3",
-        label: "Overview"
-    }, {
-        nama: "obat 4",
-        label: "Overview"
-    }, {
-        nama: "obat 5",
-        label: "Overview"
-    }, {
-        nama: "obat 6",
-        label: "Overview"
-    }, {
-        nama: "obat 7",
-        label: "Overview"
-    }, {
-        nama: "obat 8",
-        label: "Overview"
-    }, {
-        nama: "obat 9",
-        label: "Overview"
-    }];
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const getData = async () => {
+        axios.get("http://localhost:5000/obat", { withCredentials: 'true' })
+            .then((response) => {
+                setData(response.data);
+                console.log(data)
+            });
+    };
+
     const Layanan = [{
         nama: "Pengobatan",
         label: "pengobatan",
@@ -130,19 +116,18 @@ function Landing() {
                     </Container>
                 </div>
 
-            <Container className="shadow px- mb-5 blue" >
+            <Container className="shadow  mb-5 blue" >
                 <h3 className="text-center p-5">Informasi Tanaman dan Obat Tradisional</h3>
-                <Row xs={1} md={3} className="g-4">
-                    {Array.from(dataObat).map((_, idx) => (
-                        <Col>
+                <Row className="g-4">
+                    {data.map((_, idx) => (
+                        <Col xs={12} md={12} lg={12} >
                             <Card className="shadow rounded-3 p-2">
                                 {/* <Card.Img variant="top" src="holder.js/100px160"/> */}
                                 <Card.Body key={idx}>
-                                    <Card.Title>{_.nama}</Card.Title>
+                                    <Card.Title>{_.latin_name}</Card.Title>
+                                    <Card.Title>{_.local_nama}</Card.Title>
                                     <Card.Text>
-                                        This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit
-                                        longer.
+                                        {_.description}
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
